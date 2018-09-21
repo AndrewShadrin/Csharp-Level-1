@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task3
+{
+//3 задание
+    public class Program
+    {
+        public static double Distance(int x1, int y1, int x2, int y2)
+        {
+            return Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+        }
+
+        public static void Main()
+        {
+            int x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+            double distance = 0;
+
+            Console.WriteLine("Введите данные первой точки");
+            Console.WriteLine("Введите координату х точки");
+            x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координату y точки");
+            y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите данные второй точки");
+            Console.WriteLine("Введите координату х точки");
+            x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите координату y точки");
+            y2 = Convert.ToInt32(Console.ReadLine());
+
+            // 3 задание
+            distance = Distance(x1,y1,x2,y2);
+            Console.WriteLine($"Расстояние между точками = {distance,3:f2}");
+            Console.ReadKey();
+        }
+    }
+
+}
