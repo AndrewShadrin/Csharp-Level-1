@@ -10,10 +10,17 @@ namespace Task5
 
     class Program
     {
+        static void Print(string message, int cursX, int cursY)
+        {
+            Console.SetCursorPosition(cursX, cursY);
+            Console.WriteLine(message);
+        }
+
         static void Main()
         {
-            Console.SetCursorPosition(Console.WindowWidth / 2 - 15, Console.WindowHeight / 2);
-            Console.WriteLine("Андрей Шадрин, Санкт-Петербург");
+            //Console.SetCursorPosition(Console.WindowWidth / 2 - 15, Console.WindowHeight / 2);
+            //Console.WriteLine("Андрей Шадрин, Санкт-Петербург");
+            Print("Андрей Шадрин, Санкт-Петербург", Console.WindowWidth / 2 - 15, Console.WindowHeight / 2);
             Console.ReadKey();
         }
     }
