@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static LessonsClassLibrary.Useful;
 
 /// <summary>
@@ -43,7 +39,7 @@ namespace Task2
         static void Main()
         {
             Print(AmountNumbers(1234567890));
-            Print(AmountNumbers(123456789034563563456345.123456));
+            Print(AmountNumbers(123456789034.123));
             Pause();
         }
     }
