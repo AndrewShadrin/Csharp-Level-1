@@ -57,5 +57,26 @@ namespace LessonsClassLibrary
             }
         }
 
+        /// <summary>
+        /// Запрашивает у пользователя значение типа Int
+        /// </summary>
+        /// <param name="message">сообщение для показа пользователю</param>
+        /// <returns>значение типа int</returns>
+        public static int ReadInt(string message)
+        {
+            Console.Write(message);
+            return Convert.ToInt32(Console.ReadLine());
+        }
+
+        /// <summary>
+        /// Запрашивает у пользователя значение типа string
+        /// </summary>
+        /// <param name="message">сообщение для показа пользователю</param>
+        /// <returns>значение типа string</returns>
+        public static string ReadString(string message)
+        {
+            Console.Write(message);
+            return Console.ReadLine();
+        }
     }
 }
