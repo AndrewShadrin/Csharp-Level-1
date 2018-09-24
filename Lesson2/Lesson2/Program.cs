@@ -3,6 +3,7 @@ using LessonsClassLibrary;
 
 /// <summary>
 /// 1. Написать метод, возвращающий минимальное из трех чисел.
+///    Выполнил Шадрин Андрей
 /// </summary>
 namespace Task1
 {

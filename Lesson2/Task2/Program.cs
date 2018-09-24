@@ -3,6 +3,7 @@ using static LessonsClassLibrary.Useful;
 
 /// <summary>
 /// 2. Написать метод подсчета количества цифр числа.
+///    Выполнил Шадрин Андрей
 /// </summary>
 namespace Task2
 {
