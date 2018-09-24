@@ -78,5 +78,17 @@ namespace LessonsClassLibrary
             Console.Write(message);
             return Console.ReadLine();
         }
+        
+        /// <summary>
+        /// Запрашивает у пользователя значение типа double
+        /// </summary>
+        /// <param name="message">сообщение для показа пользователю</param>
+        /// <returns>возвращает значение типа double</returns>
+        public static double ReadDouble(string message)
+        {
+            Console.Write(message);
+            return Convert.ToDouble(Console.ReadLine());
+        }
+
     }
 }
