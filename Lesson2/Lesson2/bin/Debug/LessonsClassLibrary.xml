@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LessonsClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:LessonsClassLibrary.Useful">
+            <summary>
+            Класс представляет методы для быстрого оформления программы
+            </summary>
+        </member>
+        <member name="M:LessonsClassLibrary.Useful.Print(System.String,System.Int32,System.Int32)">
+            <summary>
+            Выводит сообщение по указанным координатам. Если не указано, то в текущую позицию курсора.
+            </summary>
+            <param name="message">строка выводимого сообщения</param>
+            <param name="cursX">координата Х позиции курсора</param>
+            <param name="cursY">координата Y позиции курсора</param>
+        </member>
+        <member name="M:LessonsClassLibrary.Useful.Print(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Выводит сообщение по указанным координатам. Если не указано, то в текущую позицию курсора.
+            </summary>
+            <param name="message">Значение для вывода</param>
+            <param name="cursX">координата Х позиции курсора</param>
+            <param name="cursY">координата Y позиции курсора</param>
+        </member>
+        <member name="M:LessonsClassLibrary.Useful.Pause(System.Int32)">
+            <summary>
+            Осуществляет задержку работы программы, если указано время задержки, или ожидание нажатия клавиши пользователем
+            </summary>
+            <param name="delay">время задержки в миллисекундах</param>
+        </member>
+        <member name="M:LessonsClassLibrary.Useful.ReadInt(System.String)">
+            <summary>
+            Запрашивает у пользователя значение типа Int
+            </summary>
+            <param name="message">сообщение для показа пользователю</param>
+            <returns>значение типа int</returns>
+        </member>
+        <member name="M:LessonsClassLibrary.Useful.ReadString(System.String)">
+            <summary>
+            Запрашивает у пользователя значение типа string
+            </summary>
+            <param name="message">сообщение для показа пользователю</param>
+            <returns>значение типа string</returns>
+        </member>
+    </members>
+</doc>
