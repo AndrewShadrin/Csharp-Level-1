@@ -34,7 +34,14 @@ namespace Lesson_3
         public int Denum
         {
             get => denum;
-            set => denum = value;
+            set
+            {
+                if (value == 0)
+                {
+                    throw new ArgumentException("Знаменатель не может быть равен 0");
+                }
+                denum = value;
+            }
         }
 
         public Fraction()
@@ -61,7 +68,7 @@ namespace Lesson_3
             res.num = num * fraction.denum + fraction.num * denum;
             res.denum = denum * fraction.denum;
 
-            return res;
+            return res.Simpl();
         }
 
         /// <summary>
@@ -76,7 +83,7 @@ namespace Lesson_3
             res.Num = num * fraction.Denum - fraction.Num * denum;
             res.Denum = denum * fraction.Denum;
 
-            return res;
+            return res.Simpl();
         }
         
         /// <summary>
@@ -91,7 +98,7 @@ namespace Lesson_3
             res.Num = num * fraction.Num;
             res.Denum = denum * fraction.Denum;
 
-            return res;
+            return res.Simpl();
         }
 
         /// <summary>
@@ -106,7 +113,7 @@ namespace Lesson_3
             res.num = num * fraction.denum;
             res.denum = denum * fraction.num;
 
-            return res;
+            return res.Simpl();
         }
 
         /// <summary>
@@ -117,8 +124,9 @@ namespace Lesson_3
         {
             Fraction res = new Fraction();
 
-            res.Num = num;
-            res.Denum = denum;
+            int nod = NOD(num, denum);
+            res.num = num / nod;
+            res.denum = denum / nod;
 
             return res;
         }
@@ -130,7 +138,14 @@ namespace Lesson_3
         /// <returns>строка вида "числитель/знаменатель"</returns>
         public override string ToString()
         {
-            return $"{this.num}/{this.denum}";
+            if (denum==1)
+            {
+                return $"{this.num}";
+            }
+            else
+            {
+                return $"{this.num}/{this.denum})";
+            }
         }
     }
 
@@ -158,6 +173,7 @@ namespace Lesson_3
             result = fraction1.Divide(fraction2);
             Print($"{fraction1} / {fraction2} = {result}");
 
+            //fraction1.Denum = 0;
             Pause();
         }
     }
