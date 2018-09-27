@@ -38,7 +38,7 @@ namespace Lesson_3
             {
                 if (value == 0)
                 {
-                    throw new ArgumentException("Знаменатель не может быть равен 0");
+                    throw new DivideByZeroException();
                 }
                 denum = value;
             }
@@ -53,6 +53,10 @@ namespace Lesson_3
         public Fraction(int num, int denum = 1)
         {
             this.num = num;
+            if (denum == 0)
+            {
+                throw new DivideByZeroException();
+            }
             this.denum = denum;
         }
 
@@ -154,27 +158,35 @@ namespace Lesson_3
         static void Main()
         {
             Fraction fraction1, fraction2, result;
-            fraction1 = new Fraction(1,2);
-            fraction2 = new Fraction(1,4);
-            
-            //сложение
-            result = fraction1.Add(fraction2);
-            Print($"{fraction1} + {fraction2} = {result}");
-            
-            //вычитание
-            result = fraction1.Ded(fraction2);
-            Print($"{fraction1} - {fraction2} = {result}");
-            
-            //умножение
-            result = fraction1.Multiply(fraction2);
-            Print($"{fraction1} * {fraction2} = {result}");
-            
-            //деление
-            result = fraction1.Divide(fraction2);
-            Print($"{fraction1} / {fraction2} = {result}");
+            try
+            {
+                fraction1 = new Fraction(1,2);
+                fraction2 = new Fraction(1,4);
 
-            //fraction1.Denum = 0;
+                //сложение
+                result = fraction1.Add(fraction2);
+                Print($"{fraction1} + {fraction2} = {result}");
+            
+                //вычитание
+                result = fraction1.Ded(fraction2);
+                Print($"{fraction1} - {fraction2} = {result}");
+            
+                //умножение
+                result = fraction1.Multiply(fraction2);
+                Print($"{fraction1} * {fraction2} = {result}");
+            
+                //деление
+                result = fraction1.Divide(fraction2);
+                Print($"{fraction1} / {fraction2} = {result}");
+
+            }
+            catch (DivideByZeroException e)
+            {
+                Print("Знаменатель дроби не может быть равным 0");
+              
+            }
+            
             Pause();
-        }
+       }
     }
 }
