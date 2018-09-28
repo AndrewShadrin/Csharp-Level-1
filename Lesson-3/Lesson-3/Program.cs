@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static LessonsClassLibrary.Useful;
 
 /// <summary>
@@ -12,6 +8,7 @@ using static LessonsClassLibrary.Useful;
 ///     ** Добавить проверку, чтобы знаменатель не равнялся 0. 
 ///     Выбрасывать исключение ArgumentException("Знаменатель не может быть равен 0"); 
 ///     Добавить упрощение дробей.
+///     Выполнил Шадрин Андрей
 /// </summary>
 namespace Lesson_3
 {
