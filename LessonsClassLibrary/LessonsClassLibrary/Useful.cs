@@ -90,5 +90,18 @@ namespace LessonsClassLibrary
             return Convert.ToDouble(Console.ReadLine());
         }
 
+        /// <summary>
+        /// Возвращает наибольший общий делитель двух чисел
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns>число типа int</returns>
+        public static int NOD(int a, int b)
+        {
+            if (b == 0)
+                return a;
+
+            return NOD(b, a % b);
+        }
     }
 }
