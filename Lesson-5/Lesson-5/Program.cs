@@ -35,6 +35,12 @@ namespace Lesson_5
             return sym >= 'a' && sym <= 'z' || sym >= 'A' && sym <= 'Z'; ;
         }
 
+        /// <summary>
+        /// Проверяет правильность формата логина
+        /// </summary>
+        /// <param name="login">логин</param>
+        /// <param name="message">возвращаемое сообщение о корректности логина</param>
+        /// <returns>истина, если логин соответствует условиям</returns>
         static bool LoginIsGood(string login, ref string message)
         {
             if (login.Length == 0)
@@ -59,6 +65,12 @@ namespace Lesson_5
             return true;
         }
 
+        /// <summary>
+        /// Проверяет правильность формата логина с помощью регулярных выражений
+        /// </summary>
+        /// <param name="login">логин</param>
+        /// <param name="message">возвращаемое сообщение о корректности логина</param>
+        /// <returns>истина, если логин соответствует условиям</returns>
         static bool LoginIsGoodRegE(string login, ref string message)
         {
             if (login.Length == 0)
