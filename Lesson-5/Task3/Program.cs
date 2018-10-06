@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using static LessonsClassLibrary.Useful;
 
 /// <summary>
@@ -10,6 +7,7 @@ using static LessonsClassLibrary.Useful;
 /// б) * разработав собственный алгоритм.
 /// Например:
 /// badc являются перестановкой abcd.
+/// Выполнил Шадрин Андрей
 /// </summary>
 namespace Task3
 {

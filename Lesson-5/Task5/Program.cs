@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using static LessonsClassLibrary.Useful;
 
 /// <summary>
@@ -10,6 +7,7 @@ using static LessonsClassLibrary.Useful;
 /// Компьютер загружает эти данные, случайным образом выбирает 5 вопросов и задаёт их игроку. 
 /// Игрок отвечает Да или Нет на каждый вопрос и набирает баллы за каждый правильный ответ. 
 /// Список вопросов ищите во вложении или воспользуйтесь интернетом.
+/// Выполнил Шадрин Андрей
 /// </summary>
 namespace Task5
 {
