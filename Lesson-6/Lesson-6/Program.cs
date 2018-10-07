@@ -142,8 +142,9 @@ class Program
         Console.WriteLine("Сортировка по курсу и возрасту");
         PrintStudents(list);
         List<Predicate<Student>> dic = new List<Predicate<Student>>();
-        dic.Add((e => e.course == 3 || e.course == 4));
-        dic.Add((e => e.firstName == "Василий"));
+        //dic.Add(e => e.course == 3 || e.course == 4);
+        dic.Add(Search5_6);
+        dic.Add(e => e.firstName == "Петр");
         Console.WriteLine();
         PrintStudents(list.FindAll(e => SearchParam(e, dic)));
         Console.WriteLine(DateTime.Now - dt);
