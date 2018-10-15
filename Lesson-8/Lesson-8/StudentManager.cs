@@ -8,10 +8,13 @@ using System.Xml.Serialization;
 
 namespace Task3
 {
+    /// <summary>
+    /// Класс предоставляет методы для управления списком студентов
+    /// </summary>
     public static class StudentManager
     {
         /// <summary>
-        /// Читает список студентов из файла csv
+        /// Возвращает список студентов, читая его из файла csv
         /// </summary>
         /// <param name="fileName">Имя файла для чтения</param>
         /// <returns>Список студентов</returns>

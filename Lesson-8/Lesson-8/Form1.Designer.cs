@@ -37,6 +37,10 @@
             this.checkBoxJSON = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBoxXMLSave = new System.Windows.Forms.CheckBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.lblPath = new System.Windows.Forms.Label();
+            this.txtBoxPath = new System.Windows.Forms.TextBox();
+            this.btnPath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tBxFileName
@@ -57,6 +61,7 @@
             this.lblFileName.Size = new System.Drawing.Size(172, 13);
             this.lblFileName.TabIndex = 1;
             this.lblFileName.Text = "Имя файла для преобразования";
+            this.lblFileName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnFileName
             // 
@@ -76,6 +81,7 @@
             // 
             // btnConvert
             // 
+            this.btnConvert.Enabled = false;
             this.btnConvert.Location = new System.Drawing.Point(519, 106);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(92, 23);
@@ -123,11 +129,42 @@
             this.checkBoxXMLSave.Text = "XML";
             this.checkBoxXMLSave.UseVisualStyleBackColor = true;
             // 
+            // lblPath
+            // 
+            this.lblPath.AutoSize = true;
+            this.lblPath.Location = new System.Drawing.Point(91, 79);
+            this.lblPath.Name = "lblPath";
+            this.lblPath.Size = new System.Drawing.Size(114, 13);
+            this.lblPath.TabIndex = 6;
+            this.lblPath.Text = "Путь для сохранения";
+            this.lblPath.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtBoxPath
+            // 
+            this.txtBoxPath.Location = new System.Drawing.Point(211, 76);
+            this.txtBoxPath.Name = "txtBoxPath";
+            this.txtBoxPath.ReadOnly = true;
+            this.txtBoxPath.Size = new System.Drawing.Size(400, 20);
+            this.txtBoxPath.TabIndex = 7;
+            // 
+            // btnPath
+            // 
+            this.btnPath.Location = new System.Drawing.Point(619, 76);
+            this.btnPath.Name = "btnPath";
+            this.btnPath.Size = new System.Drawing.Size(22, 19);
+            this.btnPath.TabIndex = 8;
+            this.btnPath.Text = "...";
+            this.btnPath.UseVisualStyleBackColor = true;
+            this.btnPath.Click += new System.EventHandler(this.btnPath_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 161);
+            this.Controls.Add(this.btnPath);
+            this.Controls.Add(this.txtBoxPath);
+            this.Controls.Add(this.lblPath);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBoxJSON);
             this.Controls.Add(this.checkBoxXMLSave);
@@ -154,6 +191,10 @@
         private System.Windows.Forms.CheckBox checkBoxJSON;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxXMLSave;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label lblPath;
+        private System.Windows.Forms.TextBox txtBoxPath;
+        private System.Windows.Forms.Button btnPath;
     }
 }
 

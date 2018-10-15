@@ -19,6 +19,7 @@ namespace Task3
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             tBxFileName.Text = openFileDialog1.FileName;
+            btnConvert.Enabled = true;
         }
 
         private void btnFileName_Click(object sender, EventArgs e)
@@ -29,10 +30,32 @@ namespace Task3
         private void btnConvert_Click(object sender, EventArgs e)
         {
             List<Student> list = StudentManager.CreateStudents(tBxFileName.Text);
-            StudentManager.XMLSerialize(list, "students_6.xml");
-            StudentManager.SaveToXML(list, "students_6_1.xml");
-            StudentManager.SaveToJSON(list, "students_6_2.json");
+            if (txtBoxPath.Text==String.Empty)
+            {
+                MessageBox.Show("Выберите каталог для сохранения", "Ошибка сохранения файлов");
+                return;
+            }
+            string path = txtBoxPath.Text + "\\";
+            if (checkBoxXML.Checked)
+            {
+                StudentManager.XMLSerialize(list, path + "students_6.xml");
+            }
+            if (checkBoxXMLSave.Checked)
+            {
+                StudentManager.SaveToXML(list, path + "students_6_1.xml");
+            }
+            if (checkBoxJSON.Checked)
+            {
+                StudentManager.SaveToJSON(list, path + "students_6_2.json");
+            }
         }
 
+        private void btnPath_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog()==DialogResult.OK)
+            {
+                txtBoxPath.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
     }
 }
